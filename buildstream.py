@@ -6,10 +6,10 @@ import warnings
 warnings.filterwarnings("ignore")
 from pydub import AudioSegment
 
-parser = argparse.ArgumentParser(description='Build a stream from a string of syllables')
+parser = argparse.ArgumentParser(description='Build a stream from a string of syllables or n random syllables')
 parser.add_argument('--string', type=str, required=False, help='A string of syllables')
 parser.add_argument('--random', type=int, required=False, help='Number of random syllables', default=10)
-parser.add_argument('--out', type=str, required=True, help='Write stream to file instead of playing')
+parser.add_argument('--out', type=str, required=True, help='Output file for the stream (.wav)')
 parser.add_argument('--spacing', type=int, required=False, help='Syllable spacing in ms', default=0)
 
 args = parser.parse_args()
